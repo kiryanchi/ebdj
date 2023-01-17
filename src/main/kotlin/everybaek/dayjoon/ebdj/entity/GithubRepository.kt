@@ -1,18 +1,14 @@
 package everybaek.dayjoon.ebdj.entity
 
-import jakarta.persistence.CascadeType
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.OneToOne
+import jakarta.persistence.*
 
 @Entity
-class Repository(
+class GithubRepository(
     @Id
     val id: Long,
 
     @OneToOne(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "UserId")
     val user: User,
-
-
-    ) {
+) {
 }
