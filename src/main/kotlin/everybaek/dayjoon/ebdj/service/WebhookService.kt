@@ -1,4 +1,4 @@
-package everybaek.dayjoon.ebdj
+package everybaek.dayjoon.ebdj.service
 
 import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
 import org.springframework.stereotype.Service
@@ -11,8 +11,6 @@ class WebhookService {
         val headCommit = payload.headCommit
 
         ifPrivateRepositoryThrowException(repository.isPrivate)
-
-        
     }
 
     private fun ifPrivateRepositoryThrowException(isPrivate: Boolean) {

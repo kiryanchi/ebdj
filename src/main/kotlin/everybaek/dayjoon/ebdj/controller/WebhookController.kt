@@ -1,6 +1,7 @@
-package everybaek.dayjoon.ebdj
+package everybaek.dayjoon.ebdj.controller
 
 import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
+import everybaek.dayjoon.ebdj.service.WebhookService
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
