@@ -28,9 +28,25 @@ data class HeadCommit(
     val url: String,
 ) {
 
-    fun parseMessage() {
-//            val difficulty: String = this.message.split(" ")
-    }
+    val difficulty: String
+        get() = let {
+            it.message
+                .split("Time")[0]
+                .split("Title")[0]
+                .trim()
+        }
+
+    val title: String
+        get() = let {
+            it.message
+                .split("Time")[0]
+                .split("Title")[1]
+                .substring(2)
+                .trim()
+                .let { trimmed ->
+                    trimmed.substring(0, trimmed.length - 1)
+                }
+        }
 
     companion object {
         fun fixture(): HeadCommit {
@@ -53,7 +69,7 @@ data class Owner(
     companion object {
         fun fixture(): Owner {
             return Owner(
-                id = 1,
+                id = 50714602,
                 name = "kiryanchi",
             )
         }
@@ -76,7 +92,7 @@ data class Repository(
     companion object {
         fun fixture(): Repository {
             return Repository(
-                id = 1,
+                id = 244926449,
                 isPrivate = false,
                 url = "https://github.com/kiryanchi/AlgoStudy",
                 owner = Owner.fixture(),
