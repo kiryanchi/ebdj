@@ -9,7 +9,7 @@ class Solving(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
 
-    @ManyToOne(targetEntity = User::class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = User::class, fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     @JoinColumn(name = "user_id")
     val user: User,
 
