@@ -9,8 +9,12 @@ plugins {
 }
 
 group = 'everybaek.dayjoon'
-version = '0.0.1-SNAPSHOT'
+version = '0.1'
 sourceCompatibility = '17'
+
+bootJar {
+    archiveFileName = 'ebdj.jar'
+}
 
 repositories {
     mavenCentral()
