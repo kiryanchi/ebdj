@@ -15,8 +15,7 @@ class UserService(
 
     fun createUser(request: UserCreateRequest): User {
         val user = User.fromRequest(request)
-        this.userRepository.save(user)
-        return user
+        return userRepository.save(user)
     }
 
     @Transactional(readOnly = true)
