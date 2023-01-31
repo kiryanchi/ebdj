@@ -1,8 +1,9 @@
 package everybaek.dayjoon.ebdj.service
 
-import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
-import everybaek.dayjoon.ebdj.entity.Solving
-import everybaek.dayjoon.ebdj.entity.User
+import everybaek.dayjoon.ebdj.domain.dto.GithubWebhookPushPayload
+import everybaek.dayjoon.ebdj.domain.entity.Solving
+import everybaek.dayjoon.ebdj.domain.entity.User
+import everybaek.dayjoon.ebdj.domain.vo.UserSolving
 import everybaek.dayjoon.ebdj.repository.SolvingRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -30,7 +31,23 @@ class SolvingService(
         return this.solvingRepository.findAllByUserAndDate(user, date)
     }
 
+    @Transactional
     fun clear() {
         this.solvingRepository.deleteAll()
+    }
+
+    @Transactional(readOnly = true)
+    fun getAllSolvingByDate(date: LocalDate): List<Solving> {
+        return this.solvingRepository.findAllByDate(date)
+    }
+
+    @Transactional(readOnly = true)
+    fun getAllSolvings(): List<Solving> {
+        return solvingRepository.findAll()
+    }
+
+    @Transactional(readOnly = true)
+    fun isSolveProblem(date: LocalDate): List<UserSolving> {
+        return solvingRepository.getAllSolvingWithUser(date)
     }
 }

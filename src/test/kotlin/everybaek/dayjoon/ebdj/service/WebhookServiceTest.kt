@@ -1,9 +1,9 @@
 package everybaek.dayjoon.ebdj.service
 
-import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
-import everybaek.dayjoon.ebdj.dto.HeadCommit
-import everybaek.dayjoon.ebdj.dto.Owner
-import everybaek.dayjoon.ebdj.dto.Repository
+import everybaek.dayjoon.ebdj.domain.dto.GithubWebhookPushPayload
+import everybaek.dayjoon.ebdj.domain.dto.HeadCommit
+import everybaek.dayjoon.ebdj.domain.dto.Owner
+import everybaek.dayjoon.ebdj.domain.dto.Repository
 import jakarta.transaction.Transactional
 import org.junit.jupiter.api.*
 import org.springframework.beans.factory.annotation.Autowired

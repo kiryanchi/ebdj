@@ -1,10 +1,12 @@
-package everybaek.dayjoon.ebdj.entity
+package everybaek.dayjoon.ebdj.domain.entity
 
-import everybaek.dayjoon.ebdj.dto.request.UserCreateRequest
+import everybaek.dayjoon.ebdj.domain.dto.request.UserCreateRequest
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
+import jakarta.persistence.Table
 
 @Entity
+@Table(name = "users")
 class User(
     @Id
     val id: Long,

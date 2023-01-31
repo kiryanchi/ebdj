@@ -1,7 +1,7 @@
 package everybaek.dayjoon.ebdj.service
 
-import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
-import everybaek.dayjoon.ebdj.dto.request.UserCreateRequest
+import everybaek.dayjoon.ebdj.domain.dto.GithubWebhookPushPayload
+import everybaek.dayjoon.ebdj.domain.dto.request.UserCreateRequest
 import everybaek.dayjoon.ebdj.repository.SolvingRepository
 import jakarta.transaction.Transactional
 import org.junit.jupiter.api.Assertions.*

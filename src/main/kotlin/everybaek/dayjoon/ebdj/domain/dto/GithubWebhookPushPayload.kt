@@ -1,4 +1,4 @@
-package everybaek.dayjoon.ebdj.dto
+package everybaek.dayjoon.ebdj.domain.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

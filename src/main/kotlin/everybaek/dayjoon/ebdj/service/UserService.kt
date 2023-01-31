@@ -1,7 +1,7 @@
 package everybaek.dayjoon.ebdj.service
 
-import everybaek.dayjoon.ebdj.dto.request.UserCreateRequest
-import everybaek.dayjoon.ebdj.entity.User
+import everybaek.dayjoon.ebdj.domain.dto.request.UserCreateRequest
+import everybaek.dayjoon.ebdj.domain.entity.User
 import everybaek.dayjoon.ebdj.repository.UserRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
@@ -24,7 +24,7 @@ class UserService(
         return userRepository.findByIdOrNull(id)
     }
 
-    fun readAllUsers(): MutableList<User> {
+    fun readAllUsers(): List<User> {
         return userRepository.findAll()
     }
 

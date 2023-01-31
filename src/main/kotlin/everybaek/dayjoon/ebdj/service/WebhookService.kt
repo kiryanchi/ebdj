@@ -1,8 +1,8 @@
 package everybaek.dayjoon.ebdj.service
 
-import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
-import everybaek.dayjoon.ebdj.dto.request.UserCreateRequest
-import everybaek.dayjoon.ebdj.entity.User
+import everybaek.dayjoon.ebdj.domain.dto.GithubWebhookPushPayload
+import everybaek.dayjoon.ebdj.domain.dto.request.UserCreateRequest
+import everybaek.dayjoon.ebdj.domain.entity.User
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 

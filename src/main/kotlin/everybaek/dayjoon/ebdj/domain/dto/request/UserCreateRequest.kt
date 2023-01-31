@@ -1,6 +1,6 @@
-package everybaek.dayjoon.ebdj.dto.request
+package everybaek.dayjoon.ebdj.domain.dto.request
 
-import everybaek.dayjoon.ebdj.dto.GithubWebhookPushPayload
+import everybaek.dayjoon.ebdj.domain.dto.GithubWebhookPushPayload
 
 class UserCreateRequest(
     val id: Long,

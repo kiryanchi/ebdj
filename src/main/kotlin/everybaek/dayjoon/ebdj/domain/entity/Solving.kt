@@ -1,4 +1,4 @@
-package everybaek.dayjoon.ebdj.entity
+package everybaek.dayjoon.ebdj.domain.entity
 
 import jakarta.persistence.*
 import java.time.LocalDate
