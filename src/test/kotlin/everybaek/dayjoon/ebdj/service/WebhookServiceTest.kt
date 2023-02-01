@@ -43,7 +43,7 @@ class WebhookServiceTest private constructor(
             this.webhookService.push(payload)
         }
 
-        Assertions.assertEquals(exception.message, "Repository must be public")
+        Assertions.assertEquals(exception.message, "레포지토리가 Private 입니다.")
 
 
     }

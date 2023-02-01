@@ -20,5 +20,5 @@ interface SolvingRepository : JpaRepository<Solving, Long> {
                 "NEW everybaek.dayjoon.ebdj.domain.vo.UserSolving(u.name, s) " +
                 "FROM User u LEFT JOIN Solving s ON u.id = s.user.id AND s.date =:date"
     )
-    fun getAllSolvingWithUser(@Param("date") date: LocalDate): List<UserSolving>
+    fun getAllSolvingsWithUserByDate(@Param("date") date: LocalDate): List<UserSolving>
 }

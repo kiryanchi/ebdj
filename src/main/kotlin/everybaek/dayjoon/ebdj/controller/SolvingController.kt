@@ -18,7 +18,7 @@ class SolvingController(
 
     @GetMapping("/api/solving")
     fun getAllSolvingByDate(@RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") date: LocalDate): List<Solving> {
-        return solvingService.getAllSolvingByDate(date)
+        return solvingService.getAllSolvingsByDate(date)
 
     }
 
@@ -29,6 +29,6 @@ class SolvingController(
 
     @GetMapping("/api/solving/check")
     fun isSolveProblem(@RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") date: LocalDate): List<UserSolving> {
-        return solvingService.isSolveProblem(date)
+        return solvingService.getAllSolvingsWithUserByDate(date)
     }
 }
