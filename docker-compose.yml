@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  mysql:
+    container_name: ebdj_mysql
+    image: mysql:8.0.31
+    expose:
+      - ${MYSQL_PORT}
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./db:/var/lib/mysql
+
+  spring:
+    container_name: ebdj_spring
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    environment:
+      MODE: prod
+    depends_on:
+      - mysql
+    restart: always
